@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Aguafina+Script|Dancing+Script|Kaushan+Script|Open+Sans|Petit+Formal+Script|Pinyon+Script|Roboto|Rouge+Script');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Alex+Brush&display=swap');
+
+* {
+    color: black;
+    font-family: 'Alegreya Sans SC', sans-serif;;
+}
+
+body {
+    background-color: #fdc19f;
+}
+
+.navbar {
+    background-color: #ffab7bef;
+    border: 2px solid #fdc19f;
+    border-radius: 0;
+    margin: 0;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.navbar-nav>li>.Msass {
+    padding: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+}
+
+.imgLogo {
+    width: 50px;
+    padding: 0;
+}
+
+.navbar-toggle {
+    padding: 0;
+}
+
+.navbar-default .navbar-toggle {
+    border: 2px solid #fdc19f;
+}
+
+header {
+    background-image: url('../Fotos/banner6.jpg');
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 85% 85% / 30%;
+}
+
+header .overlay {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    color: black;
+    position: relative;
+    text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient(135deg, #9f05ff69 10%, #8f431a6b 100%);
+
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    text-align: start;
+    margin-bottom: 30px;
+}
+
+.divAbs{
+    top: 30px;
+    right: 0;
+    position: absolute;
+}
+.divDescripcion{
+    width: 600px;
+}
+
+@media screen and (max-width: 770px) {
+    .navbar-nav.navbar-center {
+        position: relative;
+        display: block;
+        left: 0%;
+        transform: none;
+    }
+
+    .navbar-nav>li>.Msass {
+        display: none;
+    }
+}
