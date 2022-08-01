@@ -13,17 +13,25 @@ formPedido.addEventListener('submit', (event) => { //Evento del formulario
     let seleccioPedido = document.getElementById("seleccionPedido").value;
     let sabor = document.getElementById("seleccionSabor").value;
     let unidades = document.getElementById("introducirCantidad").value;
+    let mensaje = document.getElementById("mensaje").value;
 
     //llamamos al constructor de la clase
-    const pedido = new Pedido(seleccioPedido, sabor, unidades); 
+    const pedido = new Pedido(seleccioPedido, sabor, unidades, mensaje); 
+    pedido.mostrarPedido()
 
     pedidos.push(pedido); //Agregamos en el array
     console.log(pedidos); //Visualizamos el array por consola
     formPedido.reset(); //reseteamos el formulario
 });
 
-function Pedido(seleccion, sabor, unidades){
-    this.seleccionPedido = seleccion;
-    this.saborPedido = sabor;
-    this.unidadPedido = unidades;
+class Pedido{
+    constructor(seleccion, sabor, unidades, mensaje){
+        this.seleccionPedido = seleccion;
+        this.saborPedido = sabor;
+        this.unidadPedido = unidades;
+        this.mensaje = mensaje;
+    }
+    mostrarPedido(){
+        console.log("Se registro el siguiente pedido\nSe pido " + this.unidadPedido + " unidad(es) de " + this.seleccionPedido + " con sabor " + this.saborPedido + "\nAclaración: " + this.mensaje);
+    }
 }
