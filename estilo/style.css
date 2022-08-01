@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Aguafina+Script|Dancing+Script|Kaushan+Script|Open+Sans|Petit+Formal+Script|Pinyon+Script|Roboto|Rouge+Script');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 * {
     color: black;
-    font-family: 'Alegreya Sans SC', sans-serif;;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    ;
 }
 
 body {
@@ -61,7 +63,6 @@ header .overlay {
     width: 100%;
     height: 100%;
     padding: 50px;
-    color: black;
     position: relative;
     text-shadow: 1px 1px 1px #333;
     background-image: linear-gradient(135deg, #9f05ff69 10%, #8f431a6b 100%);
@@ -71,17 +72,202 @@ header .overlay {
 h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 80px;
+    color: white;
     text-align: start;
     margin-bottom: 30px;
 }
 
-.divAbs{
+.gridTitulo {
+    display: grid;
+    margin: 5% 0;
+    grid-template-columns: 200px 400px;
+    color: white;
+}
+
+.Pdescripcion {
+    color: white;
+}
+
+.divDescripcion {
+    grid-column: 1 / span 2;
+}
+
+.Pdecoracion {
+    font-size: 20px;
+    color: white;
+    font-family: 'Caveat', cursive;
+    display: flex;
+    align-items: flex-end;
+}
+
+.divAbs {
     top: 30px;
     right: 0;
     position: absolute;
 }
-.divDescripcion{
-    width: 600px;
+
+.productos {
+    margin: 5% 0px;
+    text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+    --color: #3c3163;
+    --transition-time: 0.5s;
+}
+
+.cards-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    padding: 4rem;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.card {
+    font-family: 'Heebo';
+    --bg-filter-opacity: 0.5;
+    background-image: url("../Fotos/banner5.webp");
+    height: 20em;
+    width: 15em;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 1em;
+    padding: 1em;
+    /*margin: 2em;*/
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    transition: all, var(--transition-time);
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #ffe1be;
+    text-decoration: none;
+}
+
+#cardCupCake {
+    background-image: url("../Fotos/banner1.jpeg");
+}
+
+#cardTarta {
+    background-image: url("../Fotos/banner2.jpeg");
+}
+
+.card:hover {
+    transform: rotate(0);
+}
+
+.card h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+.card p {
+    font-size: 0.75em;
+    font-family: 'Open Sans';
+    margin-top: 0.5em;
+    line-height: 2em;
+}
+
+.card:before,
+.card:after {
+    content: '';
+    transform: scale(0);
+    transform-origin: top left;
+    border-radius: 50%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: -5;
+    transition: all, var(--transition-time);
+    transition-timing-function: ease-in-out;
+}
+
+.card:before {
+    background: rgba(255, 123, 123, 0.342);
+    width: 250%;
+    height: 250%;
+}
+
+.card:after {
+    background: rgba(255, 123, 123, 0.342);
+    width: 200%;
+    height: 200%;
+}
+
+.card:hover {
+    color: var(--color);
+}
+
+.card:hover:before,
+.card:hover:after {
+    transform: scale(1);
+}
+
+.imgPersona {
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    border: 5px solid #ffe1be;
+}
+
+.autora {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.descripcionPersonal {
+    width: 250px;
+    margin-bottom: 100px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid-space .num {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cards-wrapper {
+        padding: 4rem 2rem;
+    }
+
+    .card {
+        max-width: calc(100vw - 4rem);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+
+    .info h3 {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -96,3 +282,179 @@ h1 {
         display: none;
     }
 }
+
+/*************************Torta*****************************/
+.colour-block {
+    background: #f5b399;
+    width: 100%;
+    padding: 1% 10% 5% 10%;
+    color: #fff;
+}
+
+.SubTituloh2 {
+    text-align: center;
+    font-size: 80px;
+    font-family: 'wire one', serif;
+    font-weight: normal;
+}
+
+.textoPrueba {
+    font-size: 20px;
+    font-family: 'Raleway', serif;
+}
+
+/*------------------*/
+/*  SKEW CLOCKWISE  */
+/*------------------*/
+.skew-cc {
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    background: linear-gradient(to right bottom, #f5b399 49%, #fdc19f 50%), linear-gradient(-50deg, #ffffff 16px, #000 0);
+}
+
+/*-------------------------*/
+/* SKEW COUNTER CLOCKWISE  */
+/*-------------------------*/
+.skew-c {
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    background: linear-gradient(to left bottom, #fdc19f 49%, #f5b399 50%);
+}
+
+.divFlex {
+    display: flex;
+    justify-content: center;
+}
+
+.divpasteles {
+    margin: 0px 30px;
+}
+
+.scPedidos {
+    text-align: center;
+}
+
+.formulario {
+    width: 75%;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+}
+
+/* Importación de fuentes de google fonts */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+.contact_form {
+    width: 460px;
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+
+input, select{
+    background-color: #fbfbfb;
+    width: 408px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ab4493;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+textarea {
+    background-color: #fbfbfb;
+    width: 405px;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ab4493;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+
+label {
+    display: block;
+    float: center;
+}
+
+
+#btnPedido {
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: #ab4493;
+    border-color: #ab4493;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+}
+
+
+#btnPedido p {
+    color: #fff;
+}
+
+
+span {
+    color: #ab4493;
+}
+
+
+.aviso {
+    font-size: 13px;
+    color: #0e0e0e;
+}
+
+
+h1 {
+    font-size: 39px;
+    text-align: letf;
+    padding-bottom: 20px;
+    color: #ab4493;
+}
+
+
+h3 {
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: #0e0e0e;
+}
+
+
+p {
+    font-size: 14px;
+    color: #0e0e0e;
+}
+
+
+.formulario input:focus {
+    outline: 0;
+    border: 1px solid #97d848;
+}
+
+
+.formulario textarea:focus {
+    outline: 0;
+    border: 1px solid #97d848;
+}
+
+
+/* creado por javiniguez.com, Julio 2019 */
