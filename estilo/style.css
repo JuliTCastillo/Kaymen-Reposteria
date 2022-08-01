@@ -49,7 +49,6 @@ body {
 
 header {
     background-image: url('../Fotos/banner6.jpg');
-    text-align: center;
     width: 100%;
     height: auto;
     background-repeat: no-repeat;
@@ -101,7 +100,7 @@ h1 {
 }
 
 .divAbs {
-    top: 30px;
+    top: 40px;
     right: 0;
     position: absolute;
 }
@@ -109,6 +108,17 @@ h1 {
 .productos {
     margin: 5% 0px;
     text-align: center;
+}
+@media screen and (max-width: 550px) {
+    .gridTitulo{
+        grid-template-columns: 200px 100px;
+    }
+    .divAbs{
+        right: -30px;
+    }
+    header .overlay{
+        padding: 50px 10px;
+    }
 }
 
 @import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
@@ -310,6 +320,7 @@ h1 {
     width: 100%;
     height: 100px;
     left: 0px;
+    margin-bottom: 20px;
     background: linear-gradient(to right bottom, #f5b399 49%, #fdc19f 50%), linear-gradient(-50deg, #ffffff 16px, #000 0);
 }
 
@@ -322,11 +333,18 @@ h1 {
     left: 0px;
     background: linear-gradient(to left bottom, #fdc19f 49%, #f5b399 50%);
 }
-
 .divFlex {
     display: flex;
     justify-content: center;
 }
+@media screen and (max-width: 700px) {
+    .divFlex{
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
 
 .divpasteles {
     margin: 0px 30px;
@@ -423,15 +441,6 @@ span {
     color: #0e0e0e;
 }
 
-
-h1 {
-    font-size: 39px;
-    text-align: letf;
-    padding-bottom: 20px;
-    color: #ab4493;
-}
-
-
 h3 {
     font-size: 16px;
     padding-bottom: 30px;
@@ -455,6 +464,15 @@ p {
     outline: 0;
     border: 1px solid #97d848;
 }
-
-
-/* creado por javiniguez.com, Julio 2019 */
+.scPedido{
+    display: flex;
+    justify-content: center;
+}
+.buttonPedido{
+    padding: 5px 50px;
+    background: #ff966d;
+    border: 1px solid #cf673e;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 20px;
+}
