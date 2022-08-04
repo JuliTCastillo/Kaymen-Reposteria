@@ -51,16 +51,35 @@
     </header>
     <main>
         <section class="scPedidos col">
-            
             <!-- formulario de contacto en html y css -->
-
             <div class="contact_form">
-
                 <div class="formulario">
-                    
-
-                    <form id="frmPedido" method="get">
+                    <form id="frmPedido">
                         <h2 class="text-center">Pedidos</h2>
+                        <p class="controles">
+                            <label for="nombre" class="IngresarName">Nombre
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="text" name="introducirName" id="introducirName" required="obligatorio" placeholder="Ingrese su nombre">
+                        </p>
+                        <p class="controles">
+                            <label for="Apellido" class="IngresarApelldio">Apellido
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="text" name="introducirApellido" id="introducirApellido" required="obligatorio" placeholder="Ingrese su apellido">
+                        </p>
+                        <p class="controles">
+                            <label for="mail" class="IngresarMail">Mail
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="email" name="introducirMail" id="introducirMail" required="obligatorio" placeholder="Ingrese su mail">
+                        </p>
+                        <p class="controles">
+                            <label for="telefono" class="Ingresartelefono">Telefono
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="number" name="introducirtelefono" id="introducirTelefono" required="obligatorio" placeholder="Ingrese su telefono">
+                        </p>
                         <p class="controles">
                             <label for="seleccion" class="IngresarDato">Seleccione lo que desea pedir
                                 <span class="obligatorio">*</span>
@@ -90,11 +109,9 @@
                         </p>
 
                         <p class="controles">
-                            <label for="mensaje" class="colocar_mensaje">Mensaje
-                                <span class="obligatorio">*</span>
+                            <label for="mensaje" class="colocar_mensaje">Comentario
                             </label>
-                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
-                                required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
+                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" placeholder="Deja aquí tu comentario..."></textarea>
                         </p>
 
                         <button type="submit" name="enviarPedido" id="btnPedido">
@@ -105,13 +122,25 @@
             </div>
         </section>
     </main>
-    <script src="../script/script.js"></script>
+    <footer>
+        <div class="divRedesSociales">
+            <ul class="list">
+                <li class="enlace"><a class="link" href="#">Facebook</a></li>
+                <li class="enlace"><a class="link" href="#">Instagram</a></li>
+                <li class="enlace"><a class="link" href="#">Whatsapp</a></li>
+                <li class="enlace">
+                    <p class="pIcono">🍰</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
     </script>
     <script src="htjutps://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
     </script>
+    <script src="../script/script.js"></script>
 </body>
 
 </html>
