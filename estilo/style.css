@@ -256,9 +256,19 @@ h1 {
         grid-template-columns: 1fr;
     }
 
+    .get-in-touch {
+        width: 500px;
+    }
+
     .card-grid-space .num {
         margin-left: 0;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .get-in-touch {
+        width: 250px;
     }
 }
 
@@ -295,42 +305,52 @@ h1 {
         display: none;
     }
 }
-.scComentarios{
+
+.scComentarios {
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 50px;
 }
-.scComentarios div  h3{
+
+.scComentarios div h3 {
     padding-left: 10px;
 }
-.scComentarios div  h2{
+
+.scComentarios div h2 {
     text-align: center;
 }
-.scComentarios .divflex{
+
+.scComentarios .divflex {
     display: flex;
 }
-.comentario{
+
+.comentario {
     width: 400px;
     margin: 0px 50px;
     background-color: #ffad7f;
     position: relative;
 }
-.comentario h3{
+
+.comentario h3 {
     padding: 0;
 }
-.comentario .pComentario{
+
+.comentario .pComentario {
     padding: 15px;
     padding-bottom: 40px;
 }
-.comentario .iconoPersona{
+
+.comentario .iconoPersona {
     position: absolute;
     bottom: -35px;
     right: 0;
 }
-.comentario .iconoPersona .iconoPers{
+
+.comentario .iconoPersona .iconoPers {
     width: 80px;
 }
+
 /*************************Pastele*****************************/
 .colour-block {
     background: #f5b399;
@@ -416,7 +436,7 @@ h1 {
 
 
 input,
-select {
+.select {
     background-color: #fbfbfb;
     width: 408px;
     height: 40px;
@@ -569,7 +589,7 @@ p {
     grid-row: 1 / 2;
 }
 
-.pIcono{
+.pIcono {
     padding-top: 10px;
 }
 
@@ -599,4 +619,90 @@ p {
     75% {
         transform: rotate(-15deg);
     }
+}
+
+/************************Contacto**************************/
+.get-in-touch {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+
+}
+
+.get-in-touch .title {
+    text-align: center;
+    font-size: 3.2em;
+    line-height: 48px;
+}
+
+.contact-form .form-field {
+    position: relative;
+}
+
+.contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #f38f56;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.contact-form .input-text:focus {
+    outline: none;
+}
+
+.contact-form .input-text:focus+.label,
+.contact-form .input-text.not-empty+.label {
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+}
+
+.contact-form .label {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #d3680c;
+    cursor: text;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out,
+        -webkit-transform .2s ease-in-out;
+}
+
+.contact-form .submit-btn {
+    display: inline-block;
+    background-color: #000;
+    background-image: linear-gradient(125deg,  #ff833c, #dd3d00);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+}
+
+.contact-form .divbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scVer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido{
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
 }

@@ -54,33 +54,35 @@
         </div>
     </header>
     <main>
-        <section>
-            <link href='https://fonts.googleapis.com/css?family=Wire+One|Raleway:300' rel='stylesheet' type='text/css'>
-            <div class="skew-c"></div>
-            <div class="colour-block">
-                <h2 class="SubTituloh2">Pasteles</h2>
-                <div class="divFlex">
-                    <div class="divpasteles">
-                        <p class="textoPrueba">En <span><b>Kayme <i>delicias</i></b></span> realizamos pedidos para:</p>
-                        <br>
-                        <ul class="textoPrueba">
-                            <li>Butismo</li>
-                            <li>Casamiento</li>
-                            <li>Cumpleaños</li>
-                            <li>Babyshower</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <img src="../Fotos/banner3.jpeg" alt="Tortas" width="300px">
-                    </div>
+        <section class="get-in-touch">
+            <h1 class="title">Contactanos</h1>
+            <form class="contact-form row">
+                <div class="form-field col-lg-6">
+                    <input id="name" class="input-text js-input" type="text" required="Obligatorio">
+                    <label class="label" for="name">Name <span class="obligatorio">*</span></label>
                 </div>
-            </div>
-            <div class="skew-cc"></div>
-        </section>
-        <section class="scPedido">
-            <form method="get" action="pedido.html">
-                <button class="buttonPedido" type="submit">Hacer pedido</button>
+                <div class="form-field col-lg-6">
+                    <input id="email" class="input-text js-input" type="email" required="Obligatorio">
+                    <label class="label" for="email">E-mail <span class="obligatorio">*</span></label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input id="asunto" class="input-text js-input" type="text" required="Obligatorio">
+                    <label class="label" for="asunto">Asunto <span class="obligatorio">*</span></label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input id="message" class="input-text js-input" type="text" required="Obligatorio">
+                    <label class="label" for="message">Message <span class="obligatorio">*</span></label>
+                </div>
+                <div class="form-field col-lg-6 divbtn">
+                    <input class="submit-btn" type="submit" value="Enviar">
+                </div>
+                <div class="form-field col-lg-6 divbtn">
+                    <input id="btnVer" class="submit-btn" type="submit" value="Ver Mensaje">
+                </div>
             </form>
+        </section>
+        <section id="scVer">
+
         </section>
     </main>
     <footer>
@@ -101,6 +103,7 @@
     <script src="htjutps://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
     </script>
+    <script src="../script/dom.js"></script>
 </body>
 
 </html>
