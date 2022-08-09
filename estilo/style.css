@@ -370,6 +370,66 @@ h1 {
     font-size: 20px;
     font-family: 'Raleway', serif;
 }
+.scSeleccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    flex-direction: column;
+}
+
+.scSeleccion .divGrilla{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 150px 400px 150px;
+    grid-template-rows: 150px 150px;
+    grid-template-areas: 
+        "Crema Imagen Decoracion"
+        "Bizcochuelo Imagen Relleno";
+}
+.imgSeleccion{
+    position: relative;
+    grid-area: Imagen;
+    display: flex;
+    justify-content: center;
+}
+.imgSelect{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -24%;
+}
+.divRelative{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.diseño{
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    border-color: #f38f56;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+#Crema{
+    grid-area: Crema;
+}
+#Decoracion{
+    grid-area: Decoracion;
+}
+#Bizcochuelo{
+    grid-area: Bizcochuelo;
+}
+#Relleno{
+    grid-area: Relleno;
+}
+.divpedido{
+    padding: 20px;
+    background-color: #c57140;
+}
 
 /*------------------*/
 /*  SKEW CLOCKWISE  */
@@ -420,7 +480,6 @@ h1 {
     justify-content: center;
 }
 
-/* Importación de fuentes de google fonts */
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 
 .contact_form {

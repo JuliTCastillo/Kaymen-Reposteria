@@ -77,10 +77,55 @@
             </div>
             <div class="skew-cc"></div>
         </section>
-        <section class="scPedido">
-            <form method="get" action="pedido.html">
-                <button class="buttonPedido" type="submit">Hacer pedido</button>
+        <section class="scSeleccion">
+            <h2>Tu elijes como</h2>
+            <form id="frmPedido">
+                <div class="divGrilla">
+                    <div>
+                        <select class="diseño" id="Crema">
+                            <option disabled selected value="">Crema</option>
+                            <option value="Chocolate">Chocolate</option>
+                            <option value="Cafe">Café</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="diseño" id="Decoracion">
+                            <option disabled selected value="">Decoración</option>
+                            <option value="Fruta">Fruta</option>
+                            <option value="Flores">Flores</option>
+                            <option value="Flores">Chocolate</option>
+                            <option value="Flores">Otro</option>
+                        </select>
+                    </div>
+                    <div class="imgSeleccion">
+                        <img class="imgSelect" src="../Fotos/torta.png" alt="Torta" srcset="">
+                    </div>
+                    <div class="divRelative">
+                        <select class="diseño" id="Bizcochuelo">
+                            <option disabled selected value="">Bizcochuelo</option>
+                            <option value="Vainilla">Vainilla</option>
+                            <option value="Chocolate">Chocolate</option>
+                            <option value="Mormolado">Mormolado</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="diseño" id="Relleno">
+                            <option disabled selected value="">Relleno</option>
+                            <option value="DLL">Dulce de leche</option>
+                            <option value="CCD">Crema con durazno</option>
+                            <option value="DLL">Otro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="divRelative">
+                    <button class="buttonPedido" type="submit" id="btnEnvio">Hacer pedido</button>
+                </div>
             </form>
+        </section>
+        <section id="scPedido">
+            
         </section>
     </main>
     <footer>
@@ -97,10 +142,11 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="htjutps://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
-    </script>
+        </script>
+    <script src="../script/Pedido.js"></script>
 </body>
 
 </html>
