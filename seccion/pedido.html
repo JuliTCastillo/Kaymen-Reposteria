@@ -94,30 +94,17 @@
                                 <option value="Tarta">Tarta</option>
                             </select>
                         </p>
-
                         <p class="controles">
                             <label for="unidades" class="ingresarUnidades">¿Cuantas unidades quiere?
                                 <span class="obligatorio">*</span>
                             </label>
                             <input type="number" name="introducirCantidad" id="introducirCantidad" required="obligatorio" placeholder="0">
                         </p>
-
                         <p class="controles">
-                            <label for="sabor" class="IngresarSabor">Seleccione el sabor
+                            <label for="mensaje" class="colocar_mensaje">Pedido
                             </label>
-                            <select name="seleccionSabor" id="seleccionSabor">
-                                <option value="chocolate">Chocolate</option>
-                                <option value="Vainilla">Vainilla</option>
-                                <option value="otro">Otro</option>
-                            </select>
+                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" placeholder="Escriba detalle de su pedido..."></textarea>
                         </p>
-
-                        <p class="controles">
-                            <label for="mensaje" class="colocar_mensaje">Comentario
-                            </label>
-                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" placeholder="Deja aquí tu comentario..."></textarea>
-                        </p>
-
                         <button type="submit" name="enviarPedido" id="btnPedido">
                             <p>Realizar Pedido</p>
                         </button>
@@ -145,6 +132,7 @@
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
     </script>
     <script src="../script/script.js"></script>
+    <script src="../script/EnviarPedido.js"></script>
 </body>
 
 </html>

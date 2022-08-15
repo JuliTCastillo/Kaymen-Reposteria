@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../estilo/style.css">
+    <title>Kaymen</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span><img class="imgLogo" src="../Fotos/Logo.png" alt="Logo"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-center">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="#">Sobre mi</a></li>
+                    <li>
+                        <a class="Msass" href="../index.html">
+                            <img class="imgLogo" src="../Fotos/Logo.png" alt="Logo">
+                        </a>
+                    </li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="overlay">
+            <div class="gridTitulo">
+                <h1>Kaymen</h1>
+                <p class="Pdecoracion">Delicias</p>
+                <div class="divDescripcion ">
+                    <p class="Pdescripcion">
+                        Es un emprendimiento dedica a la respoteria,
+                        accesible para todo el mundo ❤.</p>
+                </div>
+            </div>
+            <div class="divAbs">
+                <img src="../fotos/LogoPrincipal.png" alt="Logo Principal" width="150">
+            </div>
+            <br>
+        </div>
+    </header>
+    <main>
+        <section>
+            <link href='https://fonts.googleapis.com/css?family=Wire+One|Raleway:300' rel='stylesheet' type='text/css'>
+            <div class="skew-c"></div>
+            <div class="colour-block">
+                <h2 class="SubTituloh2">Tartas</h2>
+                <div class="divFlex">
+                    <div class="divpasteles">
+                        <p class="textoPrueba">En <span><b>Kayme <i>delicias</i></b></span> realizamos pedidos para:</p>
+                        <br>
+                        <ul class="textoPrueba">
+                            <li>Butismo</li>
+                            <li>Casamiento</li>
+                            <li>Cumpleaños</li>
+                            <li>Babyshower</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="../Fotos/PortadaCupcake.jpg" alt="Tortas" width="300px">
+                    </div>
+                </div>
+            </div>
+            <div class="skew-cc"></div>
+        </section>
+        <section class="scSeleccion">
+            <h2>Tu elijes como</h2>
+            <form id="frmPedido">
+                <div class="divGrillaT">
+                    <div class="divRelative controlesTop union">
+                        <select class="diseño selectT" id="Decoracion">
+                            <option disabled selected value="">Decoración</option>
+                            <option value="Fruta">Fruta</option>
+                            <option value="Flores">Flores</option>
+                            <option value="Flores">Chocolate</option>
+                            <option value="Flores">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="imgSeleccion">
+                        <img class="imgCupcake" src="../Fotos/tarta.png" alt="cupcake">
+                    </div>
+                    <div class="divRelative ">
+                        <select class="diseño" id="Salsa">
+                            <option disabled selected value="">Salsa</option>
+                            <option value="Fruta">Fruta</option>
+                            <option value="Crema">Crema</option>
+                        </select>
+                    </div>
+                    <div class="divRelative controlesTop">
+                        <select class="diseño" id="Relleno">
+                            <option disabled selected value="">Relleno</option>
+                            <option value="CP">Crema Pastelera</option>
+                            <option value="SDF">Salsa de Fruta</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="divRelative">
+                    <button class="buttonPedido" type="submit" id="btnEnvio">Hacer pedido</button>
+                </div>
+            </form>
+        </section>
+        <section id="scPedido">
+            
+        </section>
+    </main>
+    <footer>
+        <div class="divRedesSociales">
+            <ul class="list">
+                <li class="enlace"><a class="link" href="#">Facebook</a></li>
+                <li class="enlace"><a class="link" href="#">Instagram</a></li>
+                <li class="enlace"><a class="link" href="#">Whatsapp</a></li>
+                <li class="enlace">
+                    <p class="pIcono">🍰</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+        </script>
+    <script src="htjutps://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+        </script>
+    <script src="../script/PedidoT.js"></script>
+</body>
+
+</html>
