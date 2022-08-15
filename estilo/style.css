@@ -242,57 +242,6 @@ h1 {
     margin-bottom: 100px;
 }
 
-/* MEDIA QUERIES */
-@media screen and (max-width: 1285px) {
-    .cards-wrapper {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .cards-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .get-in-touch {
-        width: 500px;
-    }
-
-    .card-grid-space .num {
-        margin-left: 0;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 570px) {
-    .get-in-touch {
-        width: 250px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .cards-wrapper {
-        padding: 4rem 2rem;
-    }
-
-    .card {
-        max-width: calc(100vw - 4rem);
-    }
-}
-
-
-@media screen and (max-width: 770px) {
-    .navbar-nav.navbar-center {
-        position: relative;
-        display: block;
-        left: 0%;
-        transform: none;
-    }
-
-    .navbar-nav>li>.Msass {
-        display: none;
-    }
-}
 
 .scComentarios {
     display: flex;
@@ -498,88 +447,6 @@ h1 {
     justify-content: center;
 }
 
-@media screen and (max-width: 700px) {
-    .divFlex {
-        align-items: center;
-        flex-direction: column;
-    }
-    .imgSelect{
-        width: 200px;
-        height: 200px;
-        top: 0;
-    }
-    .imgCupcake{
-        width: 250px;
-        height: 250px;
-    }
-    .scSeleccion .divGrilla{
-        grid-template-columns: 100px 200px 100px;
-        grid-template-rows: 100px 100px;
-    }
-    .scSeleccion .divGrillaC{
-        grid-template-columns: 104px 190px 103px;
-        grid-template-rows: 130px 130px;
-    }
-    .scSeleccion .divGrillaT{
-        grid-template-columns: 104px 250px 103px;
-        grid-template-rows: 130px 130px;
-    }
-    .selectT{
-        top: 20px;
-    }
-    .diseño{
-        font-size: 18px;
-        width: 100px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .info {
-        display: block;
-        text-align: center;
-    }
-
-    .info h3 {
-        margin: 0;
-    }
-    
-    .imgSelect{
-        width: 150px;
-        height: 150px;
-    }
-    .imgCupcake{
-        width: 150px;
-        height: 200px;
-    }
-    .selectDeco{
-        top: 25px;
-        right: -14px;
-    }
-    .selectCrema{
-        top: 55px;
-    }
-    .scSeleccion .divGrilla{
-        grid-template-columns: 80px 150px 80px;
-        grid-template-rows: 80px 80px;
-    }
-    .scSeleccion .divGrillaC{
-        grid-template-columns: 79px 114px 80px;
-        grid-template-rows: 118px 110px;
-    }
-    .scSeleccion .divGrillaT{
-        grid-template-columns: 79px 156px 80px;
-        grid-template-rows: 100px 100px;
-    }
-    .selectT{
-        top: 10px
-    }
-    .diseño{
-        font-size: 14px;
-        width: 80px;
-    }
-}
-
-
 .divpasteles {
     margin: 0px 30px;
 }
@@ -658,22 +525,6 @@ label {
     cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
-
-    input,
-    select,
-    textarea,
-    #btnPedido {
-        width: 300px;
-    }
-
-    .contact_form {
-        margin: 30px 0px;
-        padding: 0;
-    }
-}
-
-
 #btnPedido p {
     color: #fff;
     margin: 0;
@@ -742,12 +593,6 @@ p {
     margin: auto;
     align-items: center;
     list-style: none;
-}
-
-@media (min-width: 500px) {
-    .list {
-        grid-auto-flow: column;
-    }
 }
 
 .link {
@@ -883,4 +728,170 @@ p {
     padding: 10px;
     margin: 10px;
     background-color: white;
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .scComentarios .divflex{
+        flex-direction: column;
+    }
+    .comentario{
+        margin: 30px 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .get-in-touch {
+        width: 500px;
+    }
+
+    .card-grid-space .num {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .navbar-nav.navbar-center {
+        position: relative;
+        display: block;
+        left: 0%;
+        transform: none;
+    }
+
+    .navbar-nav>li>.Msass {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .divFlex {
+        align-items: center;
+        flex-direction: column;
+    }
+    .imgSelect{
+        width: 200px;
+        height: 200px;
+        top: 0;
+    }
+    .imgCupcake{
+        width: 250px;
+        height: 250px;
+    }
+    .scSeleccion .divGrilla{
+        grid-template-columns: 100px 200px 100px;
+        grid-template-rows: 100px 100px;
+    }
+    .scSeleccion .divGrillaC{
+        grid-template-columns: 104px 190px 103px;
+        grid-template-rows: 130px 130px;
+    }
+    .scSeleccion .divGrillaT{
+        grid-template-columns: 104px 250px 103px;
+        grid-template-rows: 130px 130px;
+    }
+    .selectT{
+        top: 20px;
+    }
+    .diseño{
+        font-size: 18px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    input,
+    select,
+    textarea,
+    #btnPedido {
+        width: 300px;
+    }
+
+    .contact_form {
+        margin: 30px 0px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .get-in-touch {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cards-wrapper {
+        padding: 4rem 2rem;
+    }
+
+    .card {
+        max-width: calc(100vw - 4rem);
+    }
+    .list {
+        grid-auto-flow: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+
+    .info h3 {
+        margin: 0;
+    }
+    
+    .imgSelect{
+        width: 150px;
+        height: 150px;
+    }
+    .imgCupcake{
+        width: 150px;
+        height: 200px;
+    }
+    .selectDeco{
+        top: 25px;
+        right: -14px;
+    }
+    .selectCrema{
+        top: 55px;
+    }
+    .scSeleccion .divGrilla{
+        grid-template-columns: 80px 150px 80px;
+        grid-template-rows: 80px 80px;
+    }
+    .scSeleccion .divGrillaC{
+        grid-template-columns: 79px 114px 80px;
+        grid-template-rows: 118px 110px;
+    }
+    .scSeleccion .divGrillaT{
+        grid-template-columns: 79px 156px 80px;
+        grid-template-rows: 100px 100px;
+    }
+    .selectT{
+        top: 10px
+    }
+    .diseño{
+        font-size: 14px;
+        width: 80px;
+    }
+}
+@media screen and (max-width: 420px){
+    .comentario{
+        width: 200px;
+    }    
+    .pComentario{
+        font-size: 12px;
+    }
 }
