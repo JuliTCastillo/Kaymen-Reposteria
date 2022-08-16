@@ -13,7 +13,6 @@ formPedido.addEventListener('submit', (event) => { //Evento del formulario
     event.preventDefault(); //Le sacamos el default
     /*obtenemos los datos del Pedido*/
     let seleccioPedido = document.getElementById("seleccionPedido").value;
-    let sabor = document.getElementById("seleccionSabor").value;
     let unidades = document.getElementById("introducirCantidad").value;
     let mensaje = document.getElementById("mensaje").value;
 
@@ -30,7 +29,7 @@ formPedido.addEventListener('submit', (event) => { //Evento del formulario
     console.log(clientes);
 
     //llamamos al constructor de la clase Pedido
-    const pedido = new Pedido(seleccioPedido, sabor, unidades, mensaje); 
+    const pedido = new Pedido(seleccioPedido, unidades, mensaje); 
     pedido.mostrarPedido()
 
     pedidos.push(pedido); //Agregamos en el array
@@ -39,29 +38,25 @@ formPedido.addEventListener('submit', (event) => { //Evento del formulario
 });
 
 class Cliente{
-    constructor(nombre, apellido, mail, telefono){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.mail = mail;
-        this.telefono = telefono;
+    constructor(nom, ape, ma, tel){
+        this.nombre = nom;
+        this.apellido = ape;
+        this.mail = ma;
+        this.telefono = tel;
     }
     visualizarCliente(){
         numeroCliente += 1;
-        console.log("Cliente *********************************** N°"+ numeroCliente + "\nDatos\n"+
-                    "Nombre: " + this.nombre + " Apellido: " + this.apellido + "\n" + 
-                    "Contacto\n" +"Mail: " + this.mail + " telefono: " + this.telefono);
+        console.log(`Cliente *********************************** N ${numeroCliente}\nDatos\nNombre: ${this.nombre}  Apellido: ${this.apellido} \nContacto\nMail: ${this.mail} telefono: ${this.telefono}`);
     }
 }
 
 class Pedido{
-    constructor(seleccion, sabor, unidades, mensaje){
+    constructor(seleccion, unidades, mensaje){
         this.seleccionPedido = seleccion;
-        this.saborPedido = sabor;
         this.unidadPedido = unidades;
         this.mensaje = mensaje;
     }
     mostrarPedido(){
-        console.log("Cliente *********************************** N°"+ numeroCliente);
-        console.log("Se pidio " + this.unidadPedido + " de " + this.seleccionPedido + " con sabor " + this.saborPedido + "\nAclaraciones\n" + this.mensaje);
+        console.log(`Cliente *********************************** N° ${numeroCliente}\nSe pidio ${this.unidadPedido} de ${this.seleccionPedido}\nAclaraciones\n${this.mensaje}`);
     }
 }

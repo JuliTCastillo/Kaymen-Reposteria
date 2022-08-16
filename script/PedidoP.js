@@ -1,7 +1,6 @@
 const formPedido = document.getElementById("frmPedido"); //obtenemos la id de form
 const mensaje = document.getElementById("scPedido"); //obtenemos la id del div
-let mensajePedido = "Quiero un "; 
-
+let mensajePedido = "Quiero un pastel"; 
 formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formulario
     event.preventDefault(); //Sacamos la carga
     /* Obtenemos los datos de los controles */
@@ -9,35 +8,26 @@ formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formul
     let bizcochuelo = document.getElementById("Bizcochuelo").value;
     let decoracion = document.getElementById("Decoracion").value;
     let relleno = document.getElementById("Relleno").value;
-    mensajePedido = mensajePedido + "paste"
     /* Validamos que el dato no este vacio */
-    if(bizcochuelo != ""){
-        mensajePedido = mensajePedido + " de " + bizcochuelo;
-        // localStorage.setItem("bizcochuelo", bizcochuelo);
-    }
-    if(crema != ""){
-        mensajePedido = mensajePedido + " con crema de " + crema;
-        // localStorage.setItem("crema", crema);
-    }
+    bizcochuelo != "" && (mensajePedido += ` de  ${bizcochuelo}`);
+    crema != "" && (mensajePedido += `con crema ${crema}`);
     if(relleno != ""){
         switch(relleno){
             case "DDL":
-                mensajePedido = mensajePedido + " con un relleno de dulce de leche";
+                mensajePedido += " con un relleno de dulce de leche";
                 break;
             case "CCD":
-                mensajePedido = mensajePedido + " con un relleno de crema con durazno";
+                mensajePedido += " con un relleno de crema con durazno";
                 break;
             case "Otro":
-                mensajePedido = mensajePedido + " con "+ relleno + " relleno";
+                mensajePedido += " con " + relleno + " relleno";
                 break;
         }
-        // localStorage.setItem("relleno", relleno);
     }
-    if(decoracion != ""){
-        mensajePedido = mensajePedido + " y una decoración con " + decoracion;
-        // localStorage.setItem("decoracion", decoracion);
-    }
+    decoracion != "" && (mensajePedido +=` y una decoración con ${decoracion}`);
+    /*Guardamos la seleccion en el localStorage*/
     localStorage.setItem("pedido", mensajePedido);
+    /*Redirecionamos al usuario a pedidos.html*/
     document.location.href = "../seccion/pedido.html";
 });
 

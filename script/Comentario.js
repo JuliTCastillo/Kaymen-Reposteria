@@ -1,8 +1,6 @@
-const btnVer = document.getElementById("btnVer");
+const frmMensaje = document.getElementById("frmMensaje");
 const verMensaje = document.getElementById("scVer");
 let comentarios = [];
-
-
 class Comentario {
     constructor(nombre, mail, asunto, mensaje) {
         this.nombre = nombre;
@@ -12,14 +10,14 @@ class Comentario {
     }
 }
 
-btnVer.addEventListener('click', () => {
+frmMensaje.addEventListener('submit', (event) => {
     event.preventDefault();
     let nom = document.getElementById("name").value;
-    let ape = document.getElementById("email").value;
+    let mail = document.getElementById("email").value;
     let asunto = document.getElementById("asunto").value;
     let msg = document.getElementById("message").value;
 
-    const comentario = new Comentario(nom, ape, asunto, msg);
+    const comentario = new Comentario(nom, mail, asunto, msg);
     comentarios.push(comentario);
 
     comentarios.forEach(mensaje => {
@@ -33,4 +31,5 @@ btnVer.addEventListener('click', () => {
             </div>
         </div>`
     })
+    comentarios.pop();
 })
