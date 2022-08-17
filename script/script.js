@@ -34,6 +34,14 @@ formPedido.addEventListener('submit', (event) => { //Evento del formulario
 
     pedidos.push(pedido); //Agregamos en el array
     console.log(pedidos); //Visualizamos el array por consola
+    
+    /*Agregando librerias*/
+    Swal.fire({
+        title: 'Genial!',
+        text: 'Tu pedido ha sido enviado',
+        icon: 'success',
+        confirmButtonText: 'Ok'
+    })
     formPedido.reset(); //reseteamos el formulario
 });
 

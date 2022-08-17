@@ -1,4 +1,6 @@
-const frmMensaje = document.getElementById("frmMensaje");
+const btnEnviar = document.getElementById("btnEnviar");
+const btnVer = document.getElementById("btnVer");
+const frmPedido = document.getElementById("frmMensaje");
 const verMensaje = document.getElementById("scVer");
 let comentarios = [];
 class Comentario {
@@ -9,8 +11,18 @@ class Comentario {
         this.mensaje = mensaje;
     }
 }
+btnEnviar.addEventListener('click', (e)=>{
+    e.preventDefault();
+    Swal.fire({
+        title: 'Genial!',
+        text: 'Tu comentario ha sido enviado',
+        icon: 'success',
+        confirmButtonText: 'Ok'
+    })
+    frmPedido.reset();
+})
 
-frmMensaje.addEventListener('submit', (event) => {
+btnVer.addEventListener('click', (event) => {
     event.preventDefault();
     let nom = document.getElementById("name").value;
     let mail = document.getElementById("email").value;
