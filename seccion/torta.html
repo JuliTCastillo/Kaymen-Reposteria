@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../estilo/style.css">
+    <link rel="shortcut icon" href="../Fotos/LogoEncabezado.png">
     <title>Kaymen</title>
 </head>
 
@@ -32,7 +33,7 @@
                             <img class="imgLogo" src="../Fotos/Logo.png" alt="Logo">
                         </a>
                     </li>
-                    <li><a href="#">Productos</a></li>
+                    <li><a href="producto.html">Productos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
@@ -115,18 +116,23 @@
                             <option disabled selected value="">Relleno</option>
                             <option value="DLL">Dulce de leche</option>
                             <option value="CCD">Crema con durazno</option>
-                            <option value="DLL">Otro</option>
+                            <option value="Otro">Otro</option>
                         </select>
                     </div>
                 </div>
                 <div class="divRelative">
-                    <button class="buttonPedido" type="submit" id="btnEnvio">Hacer pedido</button>
+                    <button class="buttonPedido" type="submit" id="btnEnvio">Añadir al Carrito</button>
                 </div>
             </form>
         </section>
         <section id="scPedido">
-            
         </section>
+        <div class="carrito">
+            <img src="../Fotos/compra.png" alt="carrito">
+            <div class="cantProducto">
+                <input type="numbre" id="CantidadProducto" disabled="disabled">
+            </div>
+        </div>
     </main>
     <footer>
         <div class="divRedesSociales">
@@ -146,6 +152,7 @@
     <script src="htjutps://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
         </script>
+    <script src="../script/carrito.js"></script>
     <script src="../script/PedidoP.js"></script>
 </body>
 

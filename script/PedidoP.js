@@ -1,6 +1,11 @@
 const formPedido = document.getElementById("frmPedido"); //obtenemos la id de form
 const mensaje = document.getElementById("scPedido"); //obtenemos la id del div
+const producto = document.getElementById("CantidadProducto");
+
+let pastel = [];
+
 let mensajePedido = "Quiero un pastel"; 
+
 formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formulario
     event.preventDefault(); //Sacamos la carga
     /* Obtenemos los datos de los controles */
@@ -25,9 +30,18 @@ formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formul
         }
     }
     decoracion != "" && (mensajePedido +=` y una decoración con ${decoracion}`);
+
+
+    /* Guardamos el mensaje en un array */
+    pastel.push(mensajePedido);
     /*Guardamos la seleccion en el localStorage*/
-    localStorage.setItem("pedido", mensajePedido);
+    localStorage.setItem("pastel", pastel);
+    /* Obtenemos la cantidad de producto y le sumamos uno */
+    producto.value = parseInt(localStorage.getItem("productos")) + 1;
+    /* Actualizamos el dato */
+    localStorage.setItem("productos", producto.value);
+    
     /*Redirecionamos al usuario a pedidos.html*/
-    document.location.href = "../seccion/pedido.html";
+    // document.location.href = "../seccion/pedido.html";
 });
 

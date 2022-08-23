@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nombre" : "Pastel",
+        "precio" : 1200
+    },
+    {
+        "id": 2,
+        "nombre" : "Tarta",
+        "precio" : 1500
+    },
+    {
+        "id": 3,
+        "nombre" : "Cupcake",
+        "precio" : 500
+    },
+    {
+        "id": 4,
+        "nombre" : "desayuno",
+        "precio" : 2500
+    },
+    {
+        "id" : 5,
+        "nombre" : "Selva Negra",
+        "precio" : 800
+    },
+    {
+        "id" : 6,
+        "nombre" : "Arcoiris",
+        "precio" : 700
+    },
+    {
+        "id" : 5,
+        "nombre" : "Rogel",
+        "precio" : 670
+    }
+]
