@@ -1,5 +1,5 @@
 const section = document.getElementById("mostrarProducto");
-
+const producto = document.getElementById("CantidadProducto");
 
 fetch('../Json/producto.json') // * ubicamos nuestro archivo Json
 .then(response => response.json())//*Pasamos los productos a objeto
@@ -8,13 +8,13 @@ fetch('../Json/producto.json') // * ubicamos nuestro archivo Json
         let cantidad = 0; // * sirve para dar las unidades del producto 
         switch(indice){
             case 0: //Verificamos si existe un dato con la id 
-                localStorage.getItem("pastel") == null ? cantidad = 0 : cantidad = localStorage.getItem("pastel");
+                localStorage.getItem("pastel") == null ? cantidad = 0 : (cantidad = JSON.parse(localStorage.getItem("pastel")), cantidad = cantidad.length);
             break;
             case 1: //Verificamos si existe un dato con la id 
-                localStorage.getItem("tarta") == null ? cantidad = 0 : cantidad = localStorage.getItem("tarte");
+                localStorage.getItem("Tarta") == null ? cantidad = 0 : (cantidad = JSON.parse(localStorage.getItem("Tarta")), cantidad = cantidad.length);
             break;
             case 2: //Verificamos si existe un dato con la id 
-                localStorage.getItem("cupcake") == null ? cantidad = 0 : cantidad = localStorage.getItem("cupcake");
+                localStorage.getItem("cupcake") == null ? cantidad = 0 : (cantidad = JSON.parse(localStorage.getItem("cupcake")), cantidad = cantidad.length);
             break;
             case 3: //Verificamos si existe un dato con la id 
                 localStorage.getItem("desayunos") == null ? cantidad = 0 : cantidad = localStorage.getItem("desayunos");
@@ -68,17 +68,18 @@ function GFG_click(clicked) {
     let u = unidades.value; // * Guardamos su valor en una variable
     unidades.value = 0; // * le cambiamos el valor por cero y lo mismo con el parrafo Precio
     document.getElementById(`precio${indice}`).innerText = 0;
-
+    producto.value = parseInt(localStorage.getItem("productos")) - u;
+    /* Actualizamos el dato */
+    localStorage.setItem("productos", producto.value);
 } 
 
 function validarLugar(indice){
     let pedidoPastel = JSON.parse(localStorage.getItem("porcionPastel"));
+    let u = 0;
     if(pedidoPastel != null){
         pedidoPastel.forEach((element)=>{
-            let u;
-            element.clave == indice && (u = element.unidad);
-            return u;
+            element.clave === indice && (u = element.unidad);
         })
     }
-    return 0;
+    return u;
 }

@@ -30,7 +30,7 @@ formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formul
     /* Guardamos el mensaje en un array */
     tarta.push(mensajePedido);
     /*Guardamos la seleccion en el localStorage*/
-    localStorage.setItem("Tarta", tarta);
+    localStorage.setItem("Tarta",JSON.stringify(tarta));
     /* Obtenemos la cantidad de producto y le sumamos uno */
     producto.value = parseInt(localStorage.getItem("productos")) + 1;
     /* Actualizamos el dato */

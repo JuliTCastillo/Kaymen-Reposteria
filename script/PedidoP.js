@@ -35,7 +35,7 @@ formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formul
     /* Guardamos el mensaje en un array */
     pastel.push(mensajePedido);
     /*Guardamos la seleccion en el localStorage*/
-    localStorage.setItem("pastel", pastel);
+    localStorage.setItem("pastel",JSON.stringify(pastel) );
     /* Obtenemos la cantidad de producto y le sumamos uno */
     producto.value = parseInt(localStorage.getItem("productos")) + 1;
     /* Actualizamos el dato */
