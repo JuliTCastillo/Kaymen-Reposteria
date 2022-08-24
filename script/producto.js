@@ -35,7 +35,7 @@ agregarP.addEventListener('click', (e)=>{
     if(mostrarMensajeError(unidad)){
         /*Cambiamos el numero del carrito*/
         producto.value = parseInt(localStorage.getItem("productos")) + parseInt(unidad.value);
-        let torta = new Pastel(pastel.value, unidad.value);
+        let torta = new Pastel(clavePastel(), unidad.value, pastel.value);
         porcionPastel.push(torta);
         console.log(...porcionPastel);
         /* Guardando datos */
@@ -45,10 +45,17 @@ agregarP.addEventListener('click', (e)=>{
         unidad.value = 0;
     }
 })
-
+function clavePastel(){
+    switch(pastel.value){
+        case "Arcoiris": return key = 5; 
+        case "SelvaNegra": return key = 4;
+        case "Rogel": return key = 6;
+    }
+}
 // TODO: Creamos una clase
 class Pastel{
-    constructor(unidades, tipo){
+    constructor(clave, unidades, tipo){
+        this.clave = clave;
         this.unidad = unidades;
         this.tipo = tipo;
     }

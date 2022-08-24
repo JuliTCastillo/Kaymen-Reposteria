@@ -2,36 +2,44 @@
     {
         "id": 1,
         "nombre" : "Pastel",
-        "precio" : 1200
+        "precio" : 1200,
+        "img" : "signoDeInterrogacion.png"
     },
     {
         "id": 2,
         "nombre" : "Tarta",
-        "precio" : 1500
+        "precio" : 1500,
+        "img" : "signoDeInterrogacion.png"
     },
     {
         "id": 3,
         "nombre" : "Cupcake",
-        "precio" : 500
+        "precio" : 500,
+        "img" : "signoDeInterrogacion.png"
+
     },
     {
         "id": 4,
         "nombre" : "desayuno",
-        "precio" : 2500
+        "precio" : 2500,
+        "img" : "Desayuno.png"
     },
     {
         "id" : 5,
         "nombre" : "Selva Negra",
-        "precio" : 800
+        "precio" : 800,
+        "img" : "tortaSelvaNegra.png"
     },
     {
         "id" : 6,
         "nombre" : "Arcoiris",
-        "precio" : 700
+        "precio" : 700,
+        "img" : "tortaArcoiris.png"
     },
     {
         "id" : 5,
         "nombre" : "Rogel",
-        "precio" : 670
+        "precio" : 670,
+        "img" : "tortaRogel.png"
     }
 ]

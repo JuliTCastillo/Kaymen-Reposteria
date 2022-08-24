@@ -21,7 +21,7 @@ formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formul
     /* Guardamos el pedido en un array */
     cupcake.push(mensajePedido)
     /*Guardamos en el localStorage*/
-    localStorage.setItem("pedido", cupcake);
+    localStorage.setItem("cupcake", cupcake);
     /* Obtenemos la cantidad de producto y le sumamos uno */
     producto.value = parseInt(localStorage.getItem("productos")) + 1;
     /* Actualizamos el dato */
