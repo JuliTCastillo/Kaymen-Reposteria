@@ -80,25 +80,8 @@
                             <input type="number" name="introducirtelefono" id="introducirTelefono" required="obligatorio" placeholder="Ingrese su telefono">
                         </p>
                         <p class="controles">
-                            <label for="seleccion" class="IngresarDato">Seleccione lo que desea pedir
-                                <span class="obligatorio">*</span>
-                            </label>
-                            <select name="seleccionPedido" id="seleccionPedido" class="select">
-                                <option value="Pastel">Pastel</option>
-                                <option value="Cupcake">Cupcake</option>
-                                <option value="Tarta">Tarta</option>
-                            </select>
-                        </p>
-                        <p class="controles">
-                            <label for="unidades" class="ingresarUnidades">¿Cuantas unidades quiere?
-                                <span class="obligatorio">*</span>
-                            </label>
-                            <input type="number" name="introducirCantidad" id="introducirCantidad" required="obligatorio" placeholder="0">
-                        </p>
-                        <p class="controles">
-                            <label for="mensaje" class="colocar_mensaje">Pedido
-                            </label>
-                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" placeholder="Escriba detalle de su pedido..."></textarea>
+                            <label for="Pago" class="Pago">Total a Pagar</label>
+                            <input class="text-center" type="number" name="Pago" id="PagoTotal" disabled="disabled" value="0">
                         </p>
                         <button type="submit" name="enviarPedido" id="btnPedido">
                             <p>Realizar Pedido</p>
