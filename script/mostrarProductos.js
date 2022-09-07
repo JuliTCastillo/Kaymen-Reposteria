@@ -36,16 +36,18 @@ fetch('../Json/producto.json') // * ubicamos nuestro archivo Json
         section.innerHTML += `
         <div class="col d-flex justify-content-sm-center" id="producto${indice}">
             <div>
-                <h3 class="p-0 T">${elemento.nombre}</h3>
-                <div class="d-flex ">
+                <h3 class="p-0 textCentrado">${elemento.nombre}</h3>
+                <div class="d-flex colProduct">
                     <img src="../Fotos/${elemento.img}" alt="imgProducto" width="80" height="80">
-                    <div class="row m-3 text-center">
-                        <p>Precio</p>
-                        <p id="precioArticulo${indice}">$${elemento.precio}</p>
-                    </div>
-                    <div class="row m-3 text-center">
-                        <p>Unidades</p>
-                        <input class="m-auto text-center" type="number" disabled="disabled" value="${cantidad}" id="clave${indice}" style= "width:50px"></input>
+                    <div class="d-flex">
+                        <div class="row m-3 text-center">
+                            <p>Precio</p>
+                            <p id="precioArticulo${indice}">$${elemento.precio}</p>
+                        </div>
+                        <div class="row m-3 text-center">
+                            <p>Unidades</p>
+                            <input class="m-auto text-center" type="number" disabled="disabled" value="${cantidad}" id="clave${indice}" style= "width:50px"></input>
+                        </div>
                     </div>
                     <div class="row m-3 text-center">
                         <p>Precio por unidades</p>

@@ -11,13 +11,15 @@
 body {
     background-color: #e5d9d9a1;
 }
+
 .navbar {
     background-color: rgb(199, 144, 105);
     border-radius: 0px;
     margin: 0px;
     border-color: rgba(255, 255, 255, 0);
 }
-.nav_checkbox{
+
+.nav_checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,34 +31,35 @@ body {
     padding: 0;
 }
 
-.tab-nav{
+.tab-nav {
     outline: none;
     display: none;
 }
-.label{
+
+.label {
     display: none;
     color: white;
 }
 
-.content_nav{
+.content_nav {
     grid-column: 3;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.content_nav li{
+.content_nav li {
     display: inline-block;
     padding-right: 10px;
 }
 
-.content_nav li a{
+.content_nav li a {
     text-decoration: none;
     color: white;
     position: relative;
 }
 
-.content_nav li a::after{
+.content_nav li a::after {
     content: '';
     display: block;
     height: 2px;
@@ -69,11 +72,11 @@ body {
     transition: transform ease-in-out 0.5s;
 }
 
-.content_nav li a:hover::after{
+.content_nav li a:hover::after {
     transform: scale(1, 1);
 }
 
-.content_section{
+.content_section {
     height: 120vh;
     background-image: url(back.jpg);
     background-position: center;
@@ -84,26 +87,28 @@ body {
     align-items: center;
 }
 
-@media screen and (max-width: 1280px){
-    .container{
+@media screen and (max-width: 1280px) {
+    .container {
         width: 100%;
     }
 }
 
-@media screen and (max-width: 770px){
-    .label{
+@media screen and (max-width: 770px) {
+    .label {
         display: grid;
         cursor: pointer;
         grid-column: 3;
         padding-right: 10px;
     }
-    .nav_checkbox{
+
+    .nav_checkbox {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
         padding: 10px 0px;
     }
-    .content_nav{
+
+    .content_nav {
         display: grid;
         grid-template-columns: 1fr;
         grid-column: 1/4;
@@ -113,16 +118,20 @@ body {
         transition: all ease-in-out 0.6s;
         padding-left: 10px;
     }
-    .nav_checkbox input:checked ~ .content_nav{
+
+    .nav_checkbox input:checked~.content_nav {
         max-height: 500px;
     }
-    .content_nav li{
+
+    .content_nav li {
         padding: 15px 0px;
     }
-    .content_nav .liMsass{
+
+    .content_nav .liMsass {
         padding: 0px 0px;
     }
-    .Msass{
+
+    .Msass {
         display: none;
     }
 }
@@ -205,7 +214,8 @@ h1 {
         padding: 50px 10px;
     }
 }
-main{
+
+main {
     position: relative;
 }
 
@@ -319,7 +329,7 @@ main{
     border: 5px solid #c79069;
 }
 
-.autora {
+.scSobremi {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -338,7 +348,11 @@ main{
     margin-top: 20px;
     margin-bottom: 50px;
 }
-
+.scrollY{
+    height: 300px;
+    overflow-y: scroll; 
+    margin-bottom: 120px;
+}
 .scComentarios div h3 {
     padding-left: 10px;
 }
@@ -571,6 +585,7 @@ main{
 }
 
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
 /**********************SIMULADOR************************/
 .contact_form {
     width: 460px;
@@ -692,8 +707,9 @@ p {
 .buttonPedido:hover {
     background-color: #cc7639;
 }
+
 /**********************Carrito**********************/
-.carrito{
+.carrito {
     background-color: #ff982d;
     width: 60px;
     height: 60px;
@@ -706,11 +722,13 @@ p {
     bottom: 20px;
     margin: 20px 10px 20px auto;
 }
-.carrito img{
+
+.carrito img {
     width: 40px;
     height: 40px;
 }
-.cantProducto input{
+
+.cantProducto input {
     background-color: #ff6a00;
     border: 0 solid;
     border-radius: 100%;
@@ -726,6 +744,7 @@ p {
     right: 2px;
     top: -23px;
 }
+
 /*********************Footer***********************/
 
 .list {
@@ -873,6 +892,290 @@ p {
     margin: 10px;
     background-color: white;
 }
+/**********************Productos***************************/
+.cardFlex {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.container {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.container .cardProduct {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: #d3a585;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/*Detalle del Circulo*/
+.container .cardProduct:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #c79069;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+/*Efecto del Circulo*/
+.container .cardProduct:hover:before {
+    clip-path: circle(80% at 50% -25%);
+}
+
+.container .cardProduct .imgBx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    /* width: 100%;
+    height: 100%; */
+    transition: .5s;
+}
+
+.container .cardProduct:hover .imgBx {
+    top: 25%;
+    transform: translateY(-25%);
+    /* bug  */
+}
+
+.divRelative {
+    position: relative;
+}
+
+.container .cardProduct .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+}
+
+.desayuno {
+    width: 50px;
+    height: 30px;
+    border-color: rgba(0, 0, 0, 0);
+    margin: 0;
+}
+
+.TipoDeTorta {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.container .cardProduct .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.container .cardProduct .contentBox {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.container .cardProduct:hover .contentBx {
+    height: 230px;
+}
+
+.container .cardProduct:hover .contentBox {
+    height: 75%;
+}
+
+.container .cardProduct .contentBx h2,
+.contentBox h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 15px;
+}
+
+.container .cardProduct .contentBx .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .cardProduct:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.container .cardProduct .contentBx .size h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.container .cardProduct .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: .5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container .cardProduct .contentBx .size span:hover {
+    /* other bug */
+    background: #B90000;
+}
+
+.container .cardProduct .contentBx button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    border: 0 solid;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.container .cardProduct .contentBox button {
+    display: flex;
+    width: 150px;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin: 10px auto;
+    border: 0 solid;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .cardProduct:hover .contentBx button,
+.container .cardProduct:hover .contentBox button {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .7s;
+}
+
+#mostrarProducto {
+    margin: 60px;
+}
+
+/*************************COMENTARIOS******************************/
+.cardComentario{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #e0e0e0;
+    background-clip: border-box;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    width: 800px;
+}
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem
+}
+
+.card .card-title {
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 10px
+}
+
+.comment-widgets {
+    position: relative;
+    margin-bottom: 10px
+}
+
+.comment-widgets .comment-row {
+    border-bottom: 1px solid transparent;
+    padding: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 10px 0
+}
+
+.comment-text {
+    padding-left: 15px
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.76563rem;
+    line-height: 1.5;
+    border-radius: 1px
+}
+
+.btn-cyan {
+    color: #fff;
+    background-color: #27a9e3;
+    border-color: #27a9e3
+}
+
+.btn-cyan:hover {
+    color: #fff;
+    background-color: #1a93ca;
+    border-color: #198bbe
+}
+
+.comment-widgets .comment-row:hover {
+    background: rgba(0, 0, 0, 0.05)
+}
 
 /***********************MEDIA QUERIES*******************/
 @media screen and (max-width: 1285px) {
@@ -888,6 +1191,12 @@ p {
 
     .comentario {
         margin: 30px 0;
+    }
+    .cardFlex{
+        flex-direction: column;
+    }
+    .container{
+        margin: 20px 0px;
     }
 }
 
@@ -946,6 +1255,15 @@ p {
         font-size: 18px;
         width: 100px;
     }
+    .colProduct{
+        margin: 20px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .textCentrado{
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -968,7 +1286,11 @@ p {
         width: 250px;
     }
 }
-
+@media (max-width: 576px){
+    .justify-content-sm-center {
+        justify-content: center;
+    }
+}
 @media screen and (max-width: 500px) {
     .cards-wrapper {
         padding: 4rem 2rem;
@@ -1045,205 +1367,9 @@ p {
     .pComentario {
         font-size: 12px;
     }
+
+    .container .cardProduct{
+        width: 260px;
+    }
 }
 
-/**********************Productos***************************/
-.cardFlex{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    margin: 50px 0px;
-}
-.container {
-    position: relative;
-    width: auto;
-    height: auto;
-}
-
-.container .cardProduct {
-    position: relative;
-    width: 320px;
-    height: 480px;
-    background: #d3a585;
-    border-radius: 20px;
-    overflow: hidden;
-}
-/*Detalle del Circulo*/
-.container .cardProduct:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #c79069;
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}
-/*Efecto del Circulo*/
-.container .cardProduct:hover:before {
-    clip-path: circle(80% at 50% -25%);
-}
-
-.container .cardProduct .imgBx {
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    /* width: 100%;
-    height: 100%; */
-    transition: .5s;
-}
-
-.container .cardProduct:hover .imgBx {
-    top: 25%;
-    transform: translateY(-25%);
-    /* bug  */
-}
-.divRelative{
-    position: relative;
-}
-.container .cardProduct .imgBx img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-}
-.desayuno{
-    width: 50px;
-    height: 30px;
-    border-color: rgba(0, 0, 0, 0);
-    margin: 0;
-}
-.TipoDeTorta{
-    width: 120px;
-    height: 30px;
-    border-radius: 5px;
-    border-color: rgba(0, 0, 0, 0);
-}
-.container .cardProduct .contentBx{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    transition: 1s;
-    z-index: 90;
-}
-.container .cardProduct .contentBox {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60%;
-    text-align: center;
-    transition: 1s;
-    z-index: 90;
-}
-
-.container .cardProduct:hover .contentBx {
-    height: 230px;
-}
-.container .cardProduct:hover .contentBox{
-    height: 75%;
-}
-
-.container .cardProduct .contentBx h2, .contentBox h2 {
-    position: relative;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #fff;
-    margin: 15px;
-}
-
-.container .cardProduct .contentBx .size {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 20px;
-    transition: .5s;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.container .cardProduct:hover .contentBx .size {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: .5s;
-}
-
-.container .cardProduct .contentBx .size h3 {
-    color: white;
-    font-weight: 300;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0 10px;
-    padding: 10px;
-}
-
-.container .cardProduct .contentBx .size span {
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    line-height: 26px;
-    font-size: 14px;
-    display: inline-block;
-    color: #111;
-    background: #fff;
-    margin: 0 5px;
-    transition: .5s;
-    color: #111;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.container .cardProduct .contentBx .size span:hover {
-    /* other bug */
-    background: #B90000;
-}
-
-.container .cardProduct .contentBx button{
-    display: inline-block;
-    padding: 10px 20px;
-    background: #fff;
-    border-radius: 4px;
-    border: 0 solid ;
-    margin-top: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    color: #111;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: .5s;
-}
-.container .cardProduct .contentBox button {
-    display: flex;
-    width: 150px;
-    padding: 10px 20px;
-    background: #fff;
-    border-radius: 4px;
-    margin: 10px auto;
-    border: 0 solid ;
-    text-decoration: none;
-    font-weight: 600;
-    color: #111;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: .5s;
-    align-items: center;
-    justify-content: center;
-}
-
-.container .cardProduct:hover .contentBx button,
-.container .cardProduct:hover .contentBox button {
-    opacity: 1;
-    transform: translateY(0px);
-    transition-delay: .7s;
-}
-
-#mostrarProducto{
-    margin: 60px;
-}

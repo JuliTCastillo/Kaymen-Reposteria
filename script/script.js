@@ -27,6 +27,11 @@ formPedido.addEventListener('submit', (event) => { //Evento del formulario
         text: 'Tu pedido ha sido enviado',
         icon: 'success',
         confirmButtonText: 'Ok'
+    }).then((result) =>{
+        if(result.isConfirmed){
+            localStorage.clear();
+            document.location.href = "../index.html";
+        }
     })
     formPedido.reset(); //reseteamos el formulario
 });
