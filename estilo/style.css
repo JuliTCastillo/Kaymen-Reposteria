@@ -1213,6 +1213,9 @@ p {
         margin-left: 0;
         text-align: center;
     }
+    .cardComentario{
+        width: 400px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -1356,6 +1359,9 @@ p {
     .diseño {
         font-size: 14px;
         width: 80px;
+    }
+    .cardComentario{
+        width: 280px;
     }
 }
 
