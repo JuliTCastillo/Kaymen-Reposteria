@@ -3,9 +3,9 @@ const mensaje = document.getElementById("scPedido"); //obtenemos la id del div
 const producto = document.getElementById("CantidadProducto");
 
 let tarta = []
-let mensajePedido = "Quiero una tarta"; 
 formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formulario
     event.preventDefault(); //Sacamos la carga
+    let mensajePedido = "Quiero una tarta"; 
     /* Obtenemos los datos de los controles */
     let salsa = document.getElementById("Salsa").value;
     let decoracion = document.getElementById("Decoracion").value;

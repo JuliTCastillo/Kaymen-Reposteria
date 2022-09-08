@@ -1176,6 +1176,9 @@ p {
 .comment-widgets .comment-row:hover {
     background: rgba(0, 0, 0, 0.05)
 }
+.parrafoCartel{
+    width: 500px;
+}
 
 /***********************MEDIA QUERIES*******************/
 @media screen and (max-width: 1285px) {

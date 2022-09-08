@@ -3,11 +3,9 @@ const mensaje = document.getElementById("scPedido"); //obtenemos la id del div
 const producto = document.getElementById("CantidadProducto");
 
 let pastel = [];
-
-let mensajePedido = "Quiero un pastel"; 
-
 formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formulario
     event.preventDefault(); //Sacamos la carga
+    let mensajePedido = "Quiero un pastel"; 
     /* Obtenemos los datos de los controles */
     let crema = document.getElementById("Crema").value;
     let bizcochuelo = document.getElementById("Bizcochuelo").value;
@@ -15,7 +13,7 @@ formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formul
     let relleno = document.getElementById("Relleno").value;
     /* Validamos que el dato no este vacio */
     bizcochuelo != "" && (mensajePedido += ` de  ${bizcochuelo}`);
-    crema != "" && (mensajePedido += `con crema ${crema}`);
+    crema != "" && (mensajePedido += ` con crema ${crema}`);
     if(relleno != ""){
         switch(relleno){
             case "DDL":

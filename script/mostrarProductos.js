@@ -1,6 +1,7 @@
 const section = document.getElementById("mostrarProducto");
 const producto = document.getElementById("CantidadProducto");
 let precioTotal = 0;
+let estado = 0;
 fetch('../Json/producto.json') // * ubicamos nuestro archivo Json
 .then(response => response.json())//*Pasamos los productos a objeto
 .then(producto => { // * Visualizamos
@@ -117,6 +118,21 @@ function GFG_click(clicked) {
     const total = document.getElementById("preciototal");
     //? Obtenemos el texto y le sacamos el signo pesos
     let artPrecio = articuloPrecio.textContent.substring(1, articuloPrecio.textContent.length);
+    if(parseInt(indice) < 3){ //? Verificamos que el producto sea personalizado
+        switch(parseInt(indice)){ //Verificamos que producto quiere eliminar
+            case 0: //Mandamos el array del producto y el nombre
+                mostrarDialogo(JSON.parse(localStorage.getItem("pastel")), "pastel");
+            break;
+            case 1: //Mandamos el array del producto y el nombre
+                mostrarDialogo(JSON.parse(localStorage.getItem("Tarta")), "Tarta");
+            break;
+            case 2: //Mandamos el array del producto y el nombre
+                mostrarDialogo(JSON.parse(localStorage.getItem("cupcake")), "cupcake");
+            break;
+        }
+    }
+    
+    /*Descontamos el precio de los productos*/
     precioTotal = precioTotal - (parseInt(artPrecio) * unidades.value);
     /* Cambio de valores */
     total.value = precioTotal; //! reducimos el precio total
@@ -126,8 +142,26 @@ function GFG_click(clicked) {
     vaciarMemoria(indice);
     /* Actualizamos el dato */
     localStorage.setItem("productos", producto.value);
-    localStorage.setItem("PrecioTotal", total.value);
+    localStorage.setItem("PrecioTotal", total.value);   
+    estado = 0;
+    
 } 
+
+function mostrarDialogo(arrayProducto, nomProdcuto){
+    let estructuraHTML; //Variable para estructurar el mensaje
+    arrayProducto.forEach((element, indice)=>{ //recorremos el array
+        estructuraHTML +=  
+            `<div>
+                <p>${indice+1})${element}</p>
+            </div>`; //Guardamos todos los producto que se registraron 
+    })
+    //Mensaje para el usuario
+    Swal.fire({
+        title: nomProdcuto, //Nombre del producto
+        html: "Productos Eliminados<hr>"+estructuraHTML, //Pegamos la esctrutura 
+        width: '700px', //hacemos más grande el mensaje
+    })
+}
 
 //? Vaciamos los datos que tenemos en el localStorage
 function vaciarMemoria(ind){

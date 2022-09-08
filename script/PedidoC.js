@@ -1,13 +1,11 @@
 const formPedido = document.getElementById("frmPedido"); //obtenemos las propiedades de form
 const mensaje = document.getElementById("scPedido"); //obtenemos las propiedades del div
 const producto = document.getElementById("CantidadProducto");
-
-let mensajePedido = "Quiero un cupcake "; 
-
 let cupcake = [];
 
 formPedido.addEventListener('submit', (event)=>{ //añadimos un evento al formulario
     event.preventDefault(); //Sacamos la carga
+    let mensajePedido = "Quiero un cupcake "; 
     /* Obtenemos los datos de los controles */
     let crema = document.getElementById("Crema").value;
     let bizcochuelo = document.getElementById("Bizcochuelo").value;
